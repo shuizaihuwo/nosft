@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 600px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#31bc8d", "description": "\"Accellion is a vendor producing affected software products such as FTA.\"", "entity_type": "\"ORGANIZATION\"", "id": "\"ACCELLION\"", "label": "\"ACCELLION\"", "shape": "dot", "size": 10, "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2"}, {"color": "#34f49f", "description": "\"FTA is an Accellion product affected by the OS Command Injection Vulnerability.\"", "entity_type": "\"PRODUCT\"", "id": "\"FTA\"", "label": "\"FTA\"", "shape": "dot", "size": 10, "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2"}, {"color": "#0fadbc", "description": "\"Adobe is the vendor of affected software products such as Acrobat and Reader.\"", "entity_type": "\"ORGANIZATION\"", "id": "\"ADOBE\"", "label": "\"ADOBE\"", "shape": "dot", "size": 10, "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2"}, {"color": "#24838b", "description": "\"Acrobat Reader DC is a product by Adobe affected by various security vulnerabilities.\"", "entity_type": "\"PRODUCT\"", "id": "\"ACROBAT READER DC\"", "label": "\"ACROBAT READER DC\"", "shape": "dot", "size": 10, "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2"}, {"color": "#abff14", "description": "\"Adobe produces the product ColdFusion, which is affected by multiple security vulnerabilities.\"", "entity_type": "\"UNKNOWN\"", "id": "\"COLDFUSION\"", "label": "\"COLDFUSION\"", "shape": "dot", "size": 10, "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2"}, {"color": "#36126a", "description": "\"Adobe produces the product Flash Player, which is affected by a security vulnerability.\"", "entity_type": "\"UNKNOWN\"", "id": "\"FLASH PLAYER\"", "label": "\"FLASH PLAYER\"", "shape": "dot", "size": 10, "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2"}, {"color": "#6f75e5", "description": "\"Amcrest is a company known for producing cameras and network video recorders (NVRs) that are vulnerable to certain security issues, as documented in CVE-2020-5735.\"\u003cSEP\u003e\"Amcrest is a vendor producing affected software products such as Cameras and NVR.\"", "entity_type": "\"ORGANIZATION\"", "id": "\"AMCREST\"", "label": "\"AMCREST\"", "shape": "dot", "size": 10, "source_id": "chunk-5814579bee820fbe889744f05256340e\u003cSEP\u003echunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2"}, {"color": "#1b9b2e", "description": "\"Amcrest produces the product Cameras and NVR, which is affected by a security vulnerability.\"", "entity_type": "\"UNKNOWN\"", "id": "\"CAMERAS AND NVR\"", "label": "\"CAMERAS AND NVR\"", "shape": "dot", "size": 10, "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2"}, {"color": "#94e15f", "description": "\"FTP is the protocol mentioned in the context of command injection and buffer overflow vulnerabilities in Accellion and Amcrest products.\"", "entity_type": "\"TECHNOLOGY\"", "id": "\"FTP\"", "label": "\"FTP\"", "shape": "dot", "size": 10, "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2"}, {"color": "#8c3ca7", "description": "\"FTP is the protocol associated with OS Command Injection vulnerabilities in Accellion FTA.\"", "entity_type": "\"UNKNOWN\"", "id": "\"OS COMMAND INJECTION VULNERABILITIES\"", "label": "\"OS COMMAND INJECTION VULNERABILITIES\"", "shape": "dot", "size": 10, "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2"}, {"color": "#ad5590", "description": "\"Host header is mentioned in the context of an SQL Injection vulnerability in Accellion FTA.\"", "entity_type": "\"TECHNOLOGY\"", "id": "\"HOST HEADER\"", "label": "\"HOST HEADER\"", "shape": "dot", "size": 10, "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2"}, {"color": "#bf7ac1", "description": "\"Host header is associated with SQL Injection vulnerabilities in Accellion FTA.\"", "entity_type": "\"UNKNOWN\"", "id": "\"SQL INJECTION VULNERABILITIES\"", "label": "\"SQL INJECTION VULNERABILITIES\"", "shape": "dot", "size": 10, "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2"}, {"color": "#131e97", "description": "\"POST request is mentioned in the context of OS Command Injection vulnerabilities in Accellion FTA and SSRF vulnerabilities.\"", "entity_type": "\"TECHNOLOGY\"", "id": "\"POST REQUEST\"", "label": "\"POST REQUEST\"", "shape": "dot", "size": 10, "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2"}, {"color": "#d3e768", "description": "\"doc_root.html is mentioned in the context of an SQL Injection vulnerability in Accellion FTA.\"", "entity_type": "\"TECHNOLOGY\"", "id": "\"DOC_ROOT.HTML\"", "label": "\"DOC_ROOT.HTML\"", "shape": "dot", "size": 10, "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2"}, {"color": "#4e3979", "description": "\"wmProgressstat.html is mentioned in the context of an SSRF vulnerability in Accellion FTA.\"", "entity_type": "\"TECHNOLOGY\"", "id": "\"WMPROGRESSSTAT.HTML\"", "label": "\"WMPROGRESSSTAT.HTML\"", "shape": "dot", "size": 10, "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2"}, {"color": "#0b5b4b", "description": "\"wmProgressstat.html is associated with an SSRF vulnerability in Accellion FTA.\"", "entity_type": "\"UNKNOWN\"", "id": "\"SSRF VULNERABILITIES\"", "label": "\"SSRF VULNERABILITIES\"", "shape": "dot", "size": 10, "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2"}, {"color": "#f99660", "description": "\"stack-based buffer overflow is mentioned in the context of a vulnerability in Amcrest cameras and NVR.\"", "entity_type": "\"TECHNOLOGY\"", "id": "\"STACK-BASED BUFFER OVERFLOW\"", "label": "\"STACK-BASED BUFFER OVERFLOW\"", "shape": "dot", "size": 10, "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2"}, {"color": "#d262b6", "description": "\"stack-based buffer overflow is associated with a vulnerability in Amcrest cameras and NVR.\"", "entity_type": "\"UNKNOWN\"", "id": "\"BUFFER OVERFLOW VULNERABILITIES\"", "label": "\"BUFFER OVERFLOW VULNERABILITIES\"", "shape": "dot", "size": 10, "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2"}, {"color": "#ea5cae", "description": "\"Primetime SDK is mentioned in the context of a Use-After-Free vulnerability in Adobe Flash Player.\"", "entity_type": "\"TECHNOLOGY\"", "id": "\"PRIMETIME SDK\"", "label": "\"PRIMETIME SDK\"", "shape": "dot", "size": 10, "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2"}, {"color": "#c05809", "description": "\"Primetime SDK is associated with a Use-After-Free vulnerability in Adobe Flash Player.\"", "entity_type": "\"UNKNOWN\"", "id": "\"USE-AFTER-FREE VULNERABILITIES\"", "label": "\"USE-AFTER-FREE VULNERABILITIES\"", "shape": "dot", "size": 10, "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2"}, {"color": "#d2d42a", "description": "\"Apache Solr 8.3.1 is an open-source enterprise search platform that is vulnerable to a Remote Code Execution through the VelocityResponseWriter.\"", "entity_type": "\"ORGANIZATION\"", "id": "\"APACHE SOLR 8.3.1\"", "label": "\"APACHE SOLR 8.3.1\"", "shape": "dot", "size": 10, "source_id": "chunk-f8473fb759dc15a237f85f77d4a5107f"}, {"color": "#3f46a8", "description": "\"VelocityResponseWriter is a component in Apache Solr used for handling velocity templates, which can be exploited to execute remote code.\"", "entity_type": "\"TECHNOLOGY\"", "id": "\"VELOCITYRESPONSEWRITER\"", "label": "\"VELOCITYRESPONSEWRITER\"", "shape": "dot", "size": 10, "source_id": "chunk-f8473fb759dc15a237f85f77d4a5107f"}, {"color": "#8dc933", "description": "\"CWE-74 is a common weakness enumeration associated with an improper control of source or sink in a components, services, or functions, which can lead to code injection.\"", "entity_type": "\"EVENT\"", "id": "\"CWE-74\"", "label": "\"CWE-74\"", "shape": "dot", "size": 10, "source_id": "chunk-f8473fb759dc15a237f85f77d4a5107f"}, {"color": "#b2dfdc", "description": "\"Remote Code Execution is a type of vulnerability where attackers can execute arbitrary code on a remote system, which is a critical security issue.\"", "entity_type": "\"EVENT\"", "id": "\"REMOTE CODE EXECUTION\"", "label": "\"REMOTE CODE EXECUTION\"", "shape": "dot", "size": 10, "source_id": "chunk-f8473fb759dc15a237f85f77d4a5107f"}, {"color": "#3b3d0a", "description": "\"network security refers to the potential impact on network security due to vulnerabilities in the response writer and configset-provided templates.\"", "entity_type": "\"EVENT\"", "id": "\"NETWORK SECURITY\"", "label": "\"NETWORK SECURITY\"", "shape": "dot", "size": 10, "source_id": "chunk-f8473fb759dc15a237f85f77d4a5107f"}, {"color": "#c79668", "description": "\"configset is a configuration set in Apache Solr, which can contain Velocity templates, making it a potential source of vulnerabilities.\"", "entity_type": "\"ORGANIZATION\"", "id": "\"CONFIGSET\"", "label": "\"CONFIGSET\"", "shape": "dot", "size": 10, "source_id": "chunk-f8473fb759dc15a237f85f77d4a5107f"}, {"color": "#e0a25a", "description": "\"Velocity templates are templates used in Apache Solr to customize the output, but can be exploited for remote code execution if not properly controlled.\"", "entity_type": "\"TECHNOLOGY\"", "id": "\"VELOCITY TEMPLATES\"", "label": "\"VELOCITY TEMPLATES\"", "shape": "dot", "size": 10, "source_id": "chunk-f8473fb759dc15a237f85f77d4a5107f"}, {"color": "#1f62ab", "description": "\"configset-provided template rendering is a feature in Apache Solr that allows templates from a trusted configset to be rendered, which can be vulnerable if not properly managed.\"", "entity_type": "\"EVENT\"", "id": "\"CONFIGSET-PROVIDED TEMPLATE RENDERING\"", "label": "\"CONFIGSET-PROVIDED TEMPLATE RENDERING\"", "shape": "dot", "size": 10, "source_id": "chunk-f8473fb759dc15a237f85f77d4a5107f"}, {"color": "#4f1aa6", "description": "\"response writer is a component in Apache Solr responsible for writing responses, and in this context, it can be configured to enable remote code execution.\"", "entity_type": "\"TECHNOLOGY\"", "id": "\"RESPONSE WRITER\"", "label": "\"RESPONSE WRITER\"", "shape": "dot", "size": 10, "source_id": "chunk-f8473fb759dc15a237f85f77d4a5107f"}, {"color": "#ec73a4", "description": "\"parameter provided templates are templates that can be provided as parameters and can be disabled by default but enabled by setting a specific parameter, which can lead to remote code execution if not managed properly.\"", "entity_type": "\"TECHNOLOGY\"", "id": "\"PARAMETER PROVIDED TEMPLATES\"", "label": "\"PARAMETER PROVIDED TEMPLATES\"", "shape": "dot", "size": 10, "source_id": "chunk-f8473fb759dc15a237f85f77d4a5107f"}, {"color": "#ef50d0", "description": "\"CVE-2021-27104 is an OS Command Injection vulnerability in Accellion FTA 9_12_370 and earlier, impacting various admin endpoints.\"", "entity_type": "\"VULNERABILITY\"", "id": "\"CVE-2021-27104\"", "label": "\"CVE-2021-27104\"", "shape": "dot", "size": 10, "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2"}, {"color": "#338dc2", "description": "\"CVE-2021-27102 is an OS Command Injection vulnerability in Accellion FTA 9_12_411 and earlier, impacting local web service calls.\"", "entity_type": "\"VULNERABILITY\"", "id": "\"CVE-2021-27102\"", "label": "\"CVE-2021-27102\"", "shape": "dot", "size": 10, "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2"}, {"color": "#565df3", "description": "\"CVE-2021-27101 is an SQL Injection vulnerability in Accellion FTA 9_12_370 and earlier, impacting Host headers in requests to document_root.html.\"", "entity_type": "\"VULNERABILITY\"", "id": "\"CVE-2021-27101\"", "label": "\"CVE-2021-27101\"", "shape": "dot", "size": 10, "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2"}, {"color": "#000f40", "description": "\"CVE-2021-27103 is an SSRF vulnerability in Accellion FTA 9_12_411 and earlier, impacting POST requests to wmProgressstat.html.\"", "entity_type": "\"VULNERABILITY\"", "id": "\"CVE-2021-27103\"", "label": "\"CVE-2021-27103\"", "shape": "dot", "size": 10, "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2"}, {"color": "#b32db1", "description": "\"CVE-2021-21017 is a heap-based buffer overflow vulnerability in Adobe Acrobat Reader DC before versions 2020.013.20074, 2020.001.30018, and 2017.011.30188, impacting arbitrary code execution.\"", "entity_type": "\"VULNERABILITY\"", "id": "\"CVE-2021-21017\"", "label": "\"CVE-2021-21017\"", "shape": "dot", "size": 10, "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2"}, {"color": "#bf6453", "description": "\"CVE-2021-28550 is a Use After Free vulnerability in Adobe Acrobat Reader DC before versions 2021.001.20150, 2020.001.30020, and 2017.011.30194, impacting arbitrary code execution.\"", "entity_type": "\"VULNERABILITY\"", "id": "\"CVE-2021-28550\"", "label": "\"CVE-2021-28550\"", "shape": "dot", "size": 10, "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2"}, {"color": "#c37243", "description": "\"CVE-2018-4939 is a Deserialization of Untrusted Data vulnerability in Adobe ColdFusion Update 5 and earlier, affecting arbitrary code execution.\"", "entity_type": "\"VULNERABILITY\"", "id": "\"CVE-2018-4939\"", "label": "\"CVE-2018-4939\"", "shape": "dot", "size": 10, "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2"}, {"color": "#81e5d0", "description": "\"CVE-2018-15961 is an unrestricted file upload vulnerability in Adobe ColdFusion versions 2018.0.0.310739, Update 6 and earlier, and Update 14 and earlier, impacting arbitrary code execution.\"", "entity_type": "\"VULNERABILITY\"", "id": "\"CVE-2018-15961\"", "label": "\"CVE-2018-15961\"", "shape": "dot", "size": 10, "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2"}, {"color": "#57bddc", "description": "\"CVE-2018-4878 is a Use-After-Free vulnerability in Adobe Flash Player before version 28.0.0.161, impacting arbitrary code execution.\"", "entity_type": "\"VULNERABILITY\"", "id": "\"CVE-2018-4878\"", "label": "\"CVE-2018-4878\"", "shape": "dot", "size": 10, "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2"}, {"color": "#186fee", "description": "\"Cameras and NVR is an Amcrest product affected by the Buffer Overflow Vulnerability.\"", "entity_type": "\"PRODUCT\"", "id": "\"CAMERAS AND NETWORK VIDEO RECORDER (NVR)\"", "label": "\"CAMERAS AND NETWORK VIDEO RECORDER (NVR)\"", "shape": "dot", "size": 10, "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2"}, {"color": "#d23608", "description": "\"CVE-2020-5735 is a stack-based buffer overflow vulnerability in Amcrest cameras and NVR over port 37777.\"", "entity_type": "\"VULNERABILITY\"", "id": "\"CVE-2020-5735\"", "label": "\"CVE-2020-5735\"", "shape": "dot", "size": 10, "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2"}, {"color": "#b6e0f0", "description": "\"trusted configset is a configset in Apache Solr that has been uploaded by an authenticated user and is allowed to provide rendering templates.\"", "entity_type": "\"ORGANIZATION\"", "id": "\"TRUSTED CONFIGSET\"", "label": "\"TRUSTED CONFIGSET\"", "shape": "dot", "size": 10, "source_id": "chunk-f8473fb759dc15a237f85f77d4a5107f"}]);
+                  edges = new vis.DataSet([{"description": "\"Accellion produces the product FTA, which is affected by multiple security vulnerabilities.\"", "from": "\"ACCELLION\"", "keywords": "\"product production, vulnerability impact\"", "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2", "to": "\"FTA\"", "width": 9.0}, {"description": "\"Adobe produces the product Acrobat Reader DC, which is affected by multiple security vulnerabilities.\"", "from": "\"ADOBE\"", "keywords": "\"product production, vulnerability impact\"", "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2", "to": "\"ACROBAT READER DC\"", "width": 9.0}, {"description": "\"Adobe produces the product ColdFusion, which is affected by multiple security vulnerabilities.\"", "from": "\"ADOBE\"", "keywords": "\"product production, vulnerability impact\"", "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2", "to": "\"COLDFUSION\"", "width": 9.0}, {"description": "\"Adobe produces the product Flash Player, which is affected by a security vulnerability.\"", "from": "\"ADOBE\"", "keywords": "\"product production, vulnerability impact\"", "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2", "to": "\"FLASH PLAYER\"", "width": 9.0}, {"description": "\"Amcrest produces the product Cameras and NVR, which is affected by a security vulnerability.\"", "from": "\"AMCREST\"", "keywords": "\"product production, vulnerability impact\"", "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2", "to": "\"CAMERAS AND NVR\"", "width": 9.0}, {"description": "\"FTP is the protocol associated with OS Command Injection vulnerabilities in Accellion FTA.\"", "from": "\"FTP\"", "keywords": "\"vulnerability protocol association\"", "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2", "to": "\"OS COMMAND INJECTION VULNERABILITIES\"", "width": 8.0}, {"description": "\"Host header is associated with SQL Injection vulnerabilities in Accellion FTA.\"", "from": "\"HOST HEADER\"", "keywords": "\"vulnerability protocol association\"", "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2", "to": "\"SQL INJECTION VULNERABILITIES\"", "width": 8.0}, {"description": "\"POST request is associated with OS Command Injection vulnerabilities in Accellion FTA and FTA.\"", "from": "\"POST REQUEST\"", "keywords": "\"vulnerability protocol association\"", "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2", "to": "\"OS COMMAND INJECTION VULNERABILITIES\"", "width": 8.0}, {"description": "\"doc_root.html is associated with an SQL Injection vulnerability in Accellion FTA.\"", "from": "\"DOC_ROOT.HTML\"", "keywords": "\"vulnerability protocol association\"", "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2", "to": "\"SQL INJECTION VULNERABILITIES\"", "width": 8.0}, {"description": "\"wmProgressstat.html is associated with an SSRF vulnerability in Accellion FTA.\"", "from": "\"WMPROGRESSSTAT.HTML\"", "keywords": "\"vulnerability protocol association\"", "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2", "to": "\"SSRF VULNERABILITIES\"", "width": 8.0}, {"description": "\"stack-based buffer overflow is associated with a vulnerability in Amcrest cameras and NVR.\"", "from": "\"STACK-BASED BUFFER OVERFLOW\"", "keywords": "\"vulnerability nature\"", "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2", "to": "\"BUFFER OVERFLOW VULNERABILITIES\"", "width": 8.0}, {"description": "\"Primetime SDK is associated with a Use-After-Free vulnerability in Adobe Flash Player.\"", "from": "\"PRIMETIME SDK\"", "keywords": "\"vulnerability nature\"", "source_id": "chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2", "to": "\"USE-AFTER-FREE VULNERABILITIES\"", "width": 8.0}, {"description": "\"Apache Solr 8.3.1 is vulnerable to a Remote Code Execution through the VelocityResponseWriter component.\"", "from": "\"APACHE SOLR 8.3.1\"", "keywords": "\"vulnerability, remote code execution\"", "source_id": "chunk-f8473fb759dc15a237f85f77d4a5107f", "to": "\"VELOCITYRESPONSEWRITER\"", "width": 9.0}, {"description": "\"VelocityResponseWriter is vulnerable to common weakness enumeration CWE-74, which involves improper control of source or sink.\"", "from": "\"VELOCITYRESPONSEWRITER\"", "keywords": "\"vulnerability, code injection\"", "source_id": "chunk-f8473fb759dc15a237f85f77d4a5107f", "to": "\"CWE-74\"", "width": 7.0}, {"description": "\"remote code execution can have a significant impact on network security by allowing attackers to execute arbitrary code remotely.\"", "from": "\"REMOTE CODE EXECUTION\"", "keywords": "\"security, impact\"", "source_id": "chunk-f8473fb759dc15a237f85f77d4a5107f", "to": "\"NETWORK SECURITY\"", "width": 9.0}, {"description": "\"configset can contain Velocity templates, which can be a source of vulnerabilities if not properly controlled.\"", "from": "\"CONFIGSET\"", "keywords": "\"configuration, vulnerability\"", "source_id": "chunk-f8473fb759dc15a237f85f77d4a5107f", "to": "\"VELOCITY TEMPLATES\"", "width": 8.0}, {"description": "\"response writer is used to enable configset-provided template rendering, which can be a vulnerability if not properly managed.\"", "from": "\"CONFIGSET-PROVIDED TEMPLATE RENDERING\"", "keywords": "\"component, vulnerability\"", "source_id": "chunk-f8473fb759dc15a237f85f77d4a5107f", "to": "\"RESPONSE WRITER\"", "width": 8.0}, {"description": "\"parameter provided templates can be part of the configset-provided template rendering process and can be a source of vulnerabilities if not managed properly.\"", "from": "\"CONFIGSET-PROVIDED TEMPLATE RENDERING\"", "keywords": "\"parameter, vulnerability\"", "source_id": "chunk-f8473fb759dc15a237f85f77d4a5107f", "to": "\"PARAMETER PROVIDED TEMPLATES\"", "width": 7.0}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

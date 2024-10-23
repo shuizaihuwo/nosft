@@ -1,0 +1,330 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d6" for="edge" attr.name="source_id" attr.type="string" />
+  <key id="d5" for="edge" attr.name="keywords" attr.type="string" />
+  <key id="d4" for="edge" attr.name="description" attr.type="string" />
+  <key id="d3" for="edge" attr.name="weight" attr.type="double" />
+  <key id="d2" for="node" attr.name="source_id" attr.type="string" />
+  <key id="d1" for="node" attr.name="description" attr.type="string" />
+  <key id="d0" for="node" attr.name="entity_type" attr.type="string" />
+  <graph edgedefault="undirected">
+    <node id="&quot;CVE-2021-27104&quot;">
+      <data key="d0">"VULNERABILITY"</data>
+      <data key="d1">"CVE-2021-27104 is an OS Command Injection vulnerability in Accellion FTA 9_12_370 and earlier, impacting various admin endpoints."</data>
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </node>
+    <node id="&quot;ACCELLION&quot;">
+      <data key="d0">"ORGANIZATION"</data>
+      <data key="d1">"Accellion is a vendor producing affected software products such as FTA."</data>
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </node>
+    <node id="&quot;FTA&quot;">
+      <data key="d0">"PRODUCT"</data>
+      <data key="d1">"FTA is an Accellion product affected by the OS Command Injection Vulnerability."</data>
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </node>
+    <node id="&quot;CVE-2021-27102&quot;">
+      <data key="d0">"VULNERABILITY"</data>
+      <data key="d1">"CVE-2021-27102 is an OS Command Injection vulnerability in Accellion FTA 9_12_411 and earlier, impacting local web service calls."</data>
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </node>
+    <node id="&quot;CVE-2021-27101&quot;">
+      <data key="d0">"VULNERABILITY"</data>
+      <data key="d1">"CVE-2021-27101 is an SQL Injection vulnerability in Accellion FTA 9_12_370 and earlier, impacting Host headers in requests to document_root.html."</data>
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </node>
+    <node id="&quot;CVE-2021-27103&quot;">
+      <data key="d0">"VULNERABILITY"</data>
+      <data key="d1">"CVE-2021-27103 is an SSRF vulnerability in Accellion FTA 9_12_411 and earlier, impacting POST requests to wmProgressstat.html."</data>
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </node>
+    <node id="&quot;CVE-2021-21017&quot;">
+      <data key="d0">"VULNERABILITY"</data>
+      <data key="d1">"CVE-2021-21017 is a heap-based buffer overflow vulnerability in Adobe Acrobat Reader DC before versions 2020.013.20074, 2020.001.30018, and 2017.011.30188, impacting arbitrary code execution."</data>
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </node>
+    <node id="&quot;ADOBE&quot;">
+      <data key="d0">"ORGANIZATION"</data>
+      <data key="d1">"Adobe is the vendor of affected software products such as Acrobat and Reader."</data>
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </node>
+    <node id="&quot;ACROBAT READER DC&quot;">
+      <data key="d0">"PRODUCT"</data>
+      <data key="d1">"Acrobat Reader DC is a product by Adobe affected by various security vulnerabilities."</data>
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </node>
+    <node id="&quot;CVE-2021-28550&quot;">
+      <data key="d0">"VULNERABILITY"</data>
+      <data key="d1">"CVE-2021-28550 is a Use After Free vulnerability in Adobe Acrobat Reader DC before versions 2021.001.20150, 2020.001.30020, and 2017.011.30194, impacting arbitrary code execution."</data>
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </node>
+    <node id="&quot;CVE-2018-4939&quot;">
+      <data key="d0">"VULNERABILITY"</data>
+      <data key="d1">"CVE-2018-4939 is a Deserialization of Untrusted Data vulnerability in Adobe ColdFusion Update 5 and earlier, affecting arbitrary code execution."</data>
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </node>
+    <node id="&quot;CVE-2018-15961&quot;">
+      <data key="d0">"VULNERABILITY"</data>
+      <data key="d1">"CVE-2018-15961 is an unrestricted file upload vulnerability in Adobe ColdFusion versions 2018.0.0.310739, Update 6 and earlier, and Update 14 and earlier, impacting arbitrary code execution."</data>
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </node>
+    <node id="&quot;CVE-2018-4878&quot;">
+      <data key="d0">"VULNERABILITY"</data>
+      <data key="d1">"CVE-2018-4878 is a Use-After-Free vulnerability in Adobe Flash Player before version 28.0.0.161, impacting arbitrary code execution."</data>
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </node>
+    <node id="&quot;AMCREST&quot;">
+      <data key="d0">"ORGANIZATION"</data>
+      <data key="d1">"Amcrest is a company known for producing cameras and network video recorders (NVRs) that are vulnerable to certain security issues, as documented in CVE-2020-5735."&lt;SEP&gt;"Amcrest is a vendor producing affected software products such as Cameras and NVR."</data>
+      <data key="d2">chunk-5814579bee820fbe889744f05256340e&lt;SEP&gt;chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </node>
+    <node id="&quot;CAMERAS AND NETWORK VIDEO RECORDER (NVR)&quot;">
+      <data key="d0">"PRODUCT"</data>
+      <data key="d1">"Cameras and NVR is an Amcrest product affected by the Buffer Overflow Vulnerability."</data>
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </node>
+    <node id="&quot;CVE-2020-5735&quot;">
+      <data key="d0">"VULNERABILITY"</data>
+      <data key="d1">"CVE-2020-5735 is a stack-based buffer overflow vulnerability in Amcrest cameras and NVR over port 37777."</data>
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </node>
+    <node id="&quot;FTP&quot;">
+      <data key="d0">"TECHNOLOGY"</data>
+      <data key="d1">"FTP is the protocol mentioned in the context of command injection and buffer overflow vulnerabilities in Accellion and Amcrest products."</data>
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </node>
+    <node id="&quot;HOST HEADER&quot;">
+      <data key="d0">"TECHNOLOGY"</data>
+      <data key="d1">"Host header is mentioned in the context of an SQL Injection vulnerability in Accellion FTA."</data>
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </node>
+    <node id="&quot;POST REQUEST&quot;">
+      <data key="d0">"TECHNOLOGY"</data>
+      <data key="d1">"POST request is mentioned in the context of OS Command Injection vulnerabilities in Accellion FTA and SSRF vulnerabilities."</data>
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </node>
+    <node id="&quot;DOC_ROOT.HTML&quot;">
+      <data key="d0">"TECHNOLOGY"</data>
+      <data key="d1">"doc_root.html is mentioned in the context of an SQL Injection vulnerability in Accellion FTA."</data>
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </node>
+    <node id="&quot;WMPROGRESSSTAT.HTML&quot;">
+      <data key="d0">"TECHNOLOGY"</data>
+      <data key="d1">"wmProgressstat.html is mentioned in the context of an SSRF vulnerability in Accellion FTA."</data>
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </node>
+    <node id="&quot;STACK-BASED BUFFER OVERFLOW&quot;">
+      <data key="d0">"TECHNOLOGY"</data>
+      <data key="d1">"stack-based buffer overflow is mentioned in the context of a vulnerability in Amcrest cameras and NVR."</data>
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </node>
+    <node id="&quot;PRIMETIME SDK&quot;">
+      <data key="d0">"TECHNOLOGY"</data>
+      <data key="d1">"Primetime SDK is mentioned in the context of a Use-After-Free vulnerability in Adobe Flash Player."</data>
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </node>
+    <node id="&quot;APACHE SOLR 8.3.1&quot;">
+      <data key="d0">"ORGANIZATION"</data>
+      <data key="d1">"Apache Solr 8.3.1 is an open-source enterprise search platform that is vulnerable to a Remote Code Execution through the VelocityResponseWriter."</data>
+      <data key="d2">chunk-f8473fb759dc15a237f85f77d4a5107f</data>
+    </node>
+    <node id="&quot;VELOCITYRESPONSEWRITER&quot;">
+      <data key="d0">"TECHNOLOGY"</data>
+      <data key="d1">"VelocityResponseWriter is a component in Apache Solr used for handling velocity templates, which can be exploited to execute remote code."</data>
+      <data key="d2">chunk-f8473fb759dc15a237f85f77d4a5107f</data>
+    </node>
+    <node id="&quot;CWE-74&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"CWE-74 is a common weakness enumeration associated with an improper control of source or sink in a components, services, or functions, which can lead to code injection."</data>
+      <data key="d2">chunk-f8473fb759dc15a237f85f77d4a5107f</data>
+    </node>
+    <node id="&quot;REMOTE CODE EXECUTION&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"Remote Code Execution is a type of vulnerability where attackers can execute arbitrary code on a remote system, which is a critical security issue."</data>
+      <data key="d2">chunk-f8473fb759dc15a237f85f77d4a5107f</data>
+    </node>
+    <node id="&quot;CONFIGSET&quot;">
+      <data key="d0">"ORGANIZATION"</data>
+      <data key="d1">"configset is a configuration set in Apache Solr, which can contain Velocity templates, making it a potential source of vulnerabilities."</data>
+      <data key="d2">chunk-f8473fb759dc15a237f85f77d4a5107f</data>
+    </node>
+    <node id="&quot;VELOCITY TEMPLATES&quot;">
+      <data key="d0">"TECHNOLOGY"</data>
+      <data key="d1">"Velocity templates are templates used in Apache Solr to customize the output, but can be exploited for remote code execution if not properly controlled."</data>
+      <data key="d2">chunk-f8473fb759dc15a237f85f77d4a5107f</data>
+    </node>
+    <node id="&quot;CONFIGSET-PROVIDED TEMPLATE RENDERING&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"configset-provided template rendering is a feature in Apache Solr that allows templates from a trusted configset to be rendered, which can be vulnerable if not properly managed."</data>
+      <data key="d2">chunk-f8473fb759dc15a237f85f77d4a5107f</data>
+    </node>
+    <node id="&quot;TRUSTED CONFIGSET&quot;">
+      <data key="d0">"ORGANIZATION"</data>
+      <data key="d1">"trusted configset is a configset in Apache Solr that has been uploaded by an authenticated user and is allowed to provide rendering templates."</data>
+      <data key="d2">chunk-f8473fb759dc15a237f85f77d4a5107f</data>
+    </node>
+    <node id="&quot;RESPONSE WRITER&quot;">
+      <data key="d0">"TECHNOLOGY"</data>
+      <data key="d1">"response writer is a component in Apache Solr responsible for writing responses, and in this context, it can be configured to enable remote code execution."</data>
+      <data key="d2">chunk-f8473fb759dc15a237f85f77d4a5107f</data>
+    </node>
+    <node id="&quot;PARAMETER PROVIDED TEMPLATES&quot;">
+      <data key="d0">"TECHNOLOGY"</data>
+      <data key="d1">"parameter provided templates are templates that can be provided as parameters and can be disabled by default but enabled by setting a specific parameter, which can lead to remote code execution if not managed properly."</data>
+      <data key="d2">chunk-f8473fb759dc15a237f85f77d4a5107f</data>
+    </node>
+    <node id="&quot;NETWORK SECURITY&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"network security refers to the potential impact on network security due to vulnerabilities in the response writer and configset-provided templates."</data>
+      <data key="d2">chunk-f8473fb759dc15a237f85f77d4a5107f</data>
+    </node>
+    <node id="&quot;COLDFUSION&quot;">
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+      <data key="d1">"Adobe produces the product ColdFusion, which is affected by multiple security vulnerabilities."</data>
+      <data key="d0">"UNKNOWN"</data>
+    </node>
+    <node id="&quot;FLASH PLAYER&quot;">
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+      <data key="d1">"Adobe produces the product Flash Player, which is affected by a security vulnerability."</data>
+      <data key="d0">"UNKNOWN"</data>
+    </node>
+    <node id="&quot;CAMERAS AND NVR&quot;">
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+      <data key="d1">"Amcrest produces the product Cameras and NVR, which is affected by a security vulnerability."</data>
+      <data key="d0">"UNKNOWN"</data>
+    </node>
+    <node id="&quot;OS COMMAND INJECTION VULNERABILITIES&quot;">
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+      <data key="d1">"FTP is the protocol associated with OS Command Injection vulnerabilities in Accellion FTA."</data>
+      <data key="d0">"UNKNOWN"</data>
+    </node>
+    <node id="&quot;SQL INJECTION VULNERABILITIES&quot;">
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+      <data key="d1">"Host header is associated with SQL Injection vulnerabilities in Accellion FTA."</data>
+      <data key="d0">"UNKNOWN"</data>
+    </node>
+    <node id="&quot;SSRF VULNERABILITIES&quot;">
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+      <data key="d1">"wmProgressstat.html is associated with an SSRF vulnerability in Accellion FTA."</data>
+      <data key="d0">"UNKNOWN"</data>
+    </node>
+    <node id="&quot;BUFFER OVERFLOW VULNERABILITIES&quot;">
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+      <data key="d1">"stack-based buffer overflow is associated with a vulnerability in Amcrest cameras and NVR."</data>
+      <data key="d0">"UNKNOWN"</data>
+    </node>
+    <node id="&quot;USE-AFTER-FREE VULNERABILITIES&quot;">
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+      <data key="d1">"Primetime SDK is associated with a Use-After-Free vulnerability in Adobe Flash Player."</data>
+      <data key="d0">"UNKNOWN"</data>
+    </node>
+    <edge source="&quot;ACCELLION&quot;" target="&quot;FTA&quot;">
+      <data key="d3">9.0</data>
+      <data key="d4">"Accellion produces the product FTA, which is affected by multiple security vulnerabilities."</data>
+      <data key="d5">"product production, vulnerability impact"</data>
+      <data key="d6">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </edge>
+    <edge source="&quot;ADOBE&quot;" target="&quot;ACROBAT READER DC&quot;">
+      <data key="d3">9.0</data>
+      <data key="d4">"Adobe produces the product Acrobat Reader DC, which is affected by multiple security vulnerabilities."</data>
+      <data key="d5">"product production, vulnerability impact"</data>
+      <data key="d6">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </edge>
+    <edge source="&quot;ADOBE&quot;" target="&quot;COLDFUSION&quot;">
+      <data key="d3">9.0</data>
+      <data key="d4">"Adobe produces the product ColdFusion, which is affected by multiple security vulnerabilities."</data>
+      <data key="d5">"product production, vulnerability impact"</data>
+      <data key="d6">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </edge>
+    <edge source="&quot;ADOBE&quot;" target="&quot;FLASH PLAYER&quot;">
+      <data key="d3">9.0</data>
+      <data key="d4">"Adobe produces the product Flash Player, which is affected by a security vulnerability."</data>
+      <data key="d5">"product production, vulnerability impact"</data>
+      <data key="d6">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </edge>
+    <edge source="&quot;AMCREST&quot;" target="&quot;CAMERAS AND NVR&quot;">
+      <data key="d3">9.0</data>
+      <data key="d4">"Amcrest produces the product Cameras and NVR, which is affected by a security vulnerability."</data>
+      <data key="d5">"product production, vulnerability impact"</data>
+      <data key="d6">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </edge>
+    <edge source="&quot;FTP&quot;" target="&quot;OS COMMAND INJECTION VULNERABILITIES&quot;">
+      <data key="d3">8.0</data>
+      <data key="d4">"FTP is the protocol associated with OS Command Injection vulnerabilities in Accellion FTA."</data>
+      <data key="d5">"vulnerability protocol association"</data>
+      <data key="d6">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </edge>
+    <edge source="&quot;HOST HEADER&quot;" target="&quot;SQL INJECTION VULNERABILITIES&quot;">
+      <data key="d3">8.0</data>
+      <data key="d4">"Host header is associated with SQL Injection vulnerabilities in Accellion FTA."</data>
+      <data key="d5">"vulnerability protocol association"</data>
+      <data key="d6">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </edge>
+    <edge source="&quot;POST REQUEST&quot;" target="&quot;OS COMMAND INJECTION VULNERABILITIES&quot;">
+      <data key="d3">8.0</data>
+      <data key="d4">"POST request is associated with OS Command Injection vulnerabilities in Accellion FTA and FTA."</data>
+      <data key="d5">"vulnerability protocol association"</data>
+      <data key="d6">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </edge>
+    <edge source="&quot;DOC_ROOT.HTML&quot;" target="&quot;SQL INJECTION VULNERABILITIES&quot;">
+      <data key="d3">8.0</data>
+      <data key="d4">"doc_root.html is associated with an SQL Injection vulnerability in Accellion FTA."</data>
+      <data key="d5">"vulnerability protocol association"</data>
+      <data key="d6">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </edge>
+    <edge source="&quot;WMPROGRESSSTAT.HTML&quot;" target="&quot;SSRF VULNERABILITIES&quot;">
+      <data key="d3">8.0</data>
+      <data key="d4">"wmProgressstat.html is associated with an SSRF vulnerability in Accellion FTA."</data>
+      <data key="d5">"vulnerability protocol association"</data>
+      <data key="d6">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </edge>
+    <edge source="&quot;STACK-BASED BUFFER OVERFLOW&quot;" target="&quot;BUFFER OVERFLOW VULNERABILITIES&quot;">
+      <data key="d3">8.0</data>
+      <data key="d4">"stack-based buffer overflow is associated with a vulnerability in Amcrest cameras and NVR."</data>
+      <data key="d5">"vulnerability nature"</data>
+      <data key="d6">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </edge>
+    <edge source="&quot;PRIMETIME SDK&quot;" target="&quot;USE-AFTER-FREE VULNERABILITIES&quot;">
+      <data key="d3">8.0</data>
+      <data key="d4">"Primetime SDK is associated with a Use-After-Free vulnerability in Adobe Flash Player."</data>
+      <data key="d5">"vulnerability nature"</data>
+      <data key="d6">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </edge>
+    <edge source="&quot;APACHE SOLR 8.3.1&quot;" target="&quot;VELOCITYRESPONSEWRITER&quot;">
+      <data key="d3">9.0</data>
+      <data key="d4">"Apache Solr 8.3.1 is vulnerable to a Remote Code Execution through the VelocityResponseWriter component."</data>
+      <data key="d5">"vulnerability, remote code execution"</data>
+      <data key="d6">chunk-f8473fb759dc15a237f85f77d4a5107f</data>
+    </edge>
+    <edge source="&quot;VELOCITYRESPONSEWRITER&quot;" target="&quot;CWE-74&quot;">
+      <data key="d3">7.0</data>
+      <data key="d4">"VelocityResponseWriter is vulnerable to common weakness enumeration CWE-74, which involves improper control of source or sink."</data>
+      <data key="d5">"vulnerability, code injection"</data>
+      <data key="d6">chunk-f8473fb759dc15a237f85f77d4a5107f</data>
+    </edge>
+    <edge source="&quot;REMOTE CODE EXECUTION&quot;" target="&quot;NETWORK SECURITY&quot;">
+      <data key="d3">9.0</data>
+      <data key="d4">"remote code execution can have a significant impact on network security by allowing attackers to execute arbitrary code remotely."</data>
+      <data key="d5">"security, impact"</data>
+      <data key="d6">chunk-f8473fb759dc15a237f85f77d4a5107f</data>
+    </edge>
+    <edge source="&quot;CONFIGSET&quot;" target="&quot;VELOCITY TEMPLATES&quot;">
+      <data key="d3">8.0</data>
+      <data key="d4">"configset can contain Velocity templates, which can be a source of vulnerabilities if not properly controlled."</data>
+      <data key="d5">"configuration, vulnerability"</data>
+      <data key="d6">chunk-f8473fb759dc15a237f85f77d4a5107f</data>
+    </edge>
+    <edge source="&quot;CONFIGSET-PROVIDED TEMPLATE RENDERING&quot;" target="&quot;RESPONSE WRITER&quot;">
+      <data key="d3">8.0</data>
+      <data key="d4">"response writer is used to enable configset-provided template rendering, which can be a vulnerability if not properly managed."</data>
+      <data key="d5">"component, vulnerability"</data>
+      <data key="d6">chunk-f8473fb759dc15a237f85f77d4a5107f</data>
+    </edge>
+    <edge source="&quot;CONFIGSET-PROVIDED TEMPLATE RENDERING&quot;" target="&quot;PARAMETER PROVIDED TEMPLATES&quot;">
+      <data key="d3">7.0</data>
+      <data key="d4">"parameter provided templates can be part of the configset-provided template rendering process and can be a source of vulnerabilities if not managed properly."</data>
+      <data key="d5">"parameter, vulnerability"</data>
+      <data key="d6">chunk-f8473fb759dc15a237f85f77d4a5107f</data>
+    </edge>
+  </graph>
+</graphml>

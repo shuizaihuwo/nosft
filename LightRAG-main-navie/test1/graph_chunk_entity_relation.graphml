@@ -1,0 +1,206 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d6" for="edge" attr.name="source_id" attr.type="string" />
+  <key id="d5" for="edge" attr.name="keywords" attr.type="string" />
+  <key id="d4" for="edge" attr.name="description" attr.type="string" />
+  <key id="d3" for="edge" attr.name="weight" attr.type="double" />
+  <key id="d2" for="node" attr.name="source_id" attr.type="string" />
+  <key id="d1" for="node" attr.name="description" attr.type="string" />
+  <key id="d0" for="node" attr.name="entity_type" attr.type="string" />
+  <graph edgedefault="undirected">
+    <node id="&quot;CVE-2021-27104&quot;">
+      <data key="d0">"VULNERABILITY"</data>
+      <data key="d1">"CVE-2021-27104 is a OS Command Injection Vulnerability affecting Accellion FTA 9_12_370 and earlier via crafted POST requests to admin endpoints. Urgent patching is required by 2021-11-17."&lt;|</data>
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </node>
+    <node id="&quot;CVE-2018-4878&quot;">
+      <data key="d0">"VULNERABILITY"</data>
+      <data key="d1">"CVE-2018-4878 is a Use-After-Free Vulnerability affecting Adobe Flash Player before 28.0.0.161. This vulnerability was exploited in the wild in January and February 2018. Urgent patching or disconnecting the impacted product is required."|&lt;SEP&gt;"CVE-2018-4878 is a Use-After-Free vulnerability affecting Adobe Flash Player before 28.0.0.161. This vulnerability was exploited in the wild in January and February 2018. Urgent patching or disconnecting the impacted product is required."|</data>
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </node>
+    <node id="&quot;CVE-2021-21017&quot;">
+      <data key="d0">"VULNERABILITY"</data>
+      <data key="d1">"CVE-2021-21017 is a Heap-based Buffer Overflow Vulnerability affecting Adobe Acrobat and Reader 2020.013.20074 (and earlier), 2020.001.30018 (and earlier) and 2017.011.30188 (and earlier). Urgent patching is required by 2021-11-17."|</data>
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </node>
+    <node id="&quot;CVE-2021-28550&quot;">
+      <data key="d0">"VULNERABILITY"</data>
+      <data key="d1">"CVE-2021-28550 is a Use After-Free Vulnerability affecting Adobe Acrobat and Reader 2021.001.20150 (and earlier), 2020.001.30020 (and earlier) and 2017.011.30194 (and earlier). Urgent patching is required by 2021-11-17."|</data>
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </node>
+    <node id="&quot;CVE-2018-4939&quot;">
+      <data key="d0">"VULNERABILITY"</data>
+      <data key="d1">"CVE-2018-4939 is a Deserialization of Untrusted Data vulnerability affecting Adobe ColdFusion Update 5 and earlier, and ColdFusion 11 Update 13 and earlier. Urgent patching is required by 2022-05-03."|</data>
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </node>
+    <node id="&quot;CVE-2018-15961&quot;">
+      <data key="d0">"VULNERABILITY"</data>
+      <data key="d1">"CVE-2018-15961 is an Unrestricted File Upload vulnerability affecting Adobe ColdFusion versions July 12 release (2018.0.0.310739), Update 6 and earlier, and Update 14 and earlier. Urgent patching is required by 2022-05-03."|</data>
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </node>
+    <node id="&quot;CVSS&quot;">
+      <data key="d0">"METRIC"</data>
+      <data key="d1">"CVSS is a measure of the severity and security impact of vulnerabilities. Scored on a scale from 0.0 to 10.0."|</data>
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </node>
+    <node id="&quot;FTA&quot;">
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+      <data key="d1">"CVE-2021-27104 is a reported vulnerability affecting the Accellion FTA product."</data>
+      <data key="d0">"UNKNOWN"</data>
+    </node>
+    <node id="&quot;CVE-2021-27102&quot;">
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+      <data key="d1">"CVE-2021-27102 is a reported vulnerability affecting the Accellion FTA product."</data>
+      <data key="d0">"UNKNOWN"</data>
+    </node>
+    <node id="&quot;CVE-2021-27101&quot;">
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+      <data key="d1">"CVE-2021-27101 is a reported vulnerability affecting the Accellion FTA product."</data>
+      <data key="d0">"UNKNOWN"</data>
+    </node>
+    <node id="&quot;CVE-2021-27103&quot;">
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+      <data key="d1">"CVE-2021-27103 is a reported vulnerability affecting the Accellion FTA product."</data>
+      <data key="d0">"UNKNOWN"</data>
+    </node>
+    <node id="&quot;ADOBE&quot;">
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+      <data key="d1">"CVE-2021-21017 is a reported vulnerability affecting Adobe Acrobat and Reader products."</data>
+      <data key="d0">"UNKNOWN"</data>
+    </node>
+    <node id="&quot;COLDFUSION&quot;">
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+      <data key="d1">"CVE-2018-4939 is a reported vulnerability affecting ColdFusion products."</data>
+      <data key="d0">"UNKNOWN"</data>
+    </node>
+    <node id="&quot;AMCREST&quot;">
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+      <data key="d1">"Amcrest's cameras and NVR products are affected by a reported vulnerability."</data>
+      <data key="d0">"UNKNOWN"</data>
+    </node>
+    <node id="&quot;CAMERAS AND NETWORK VIDEO RECORDER (NVR)&quot;">
+      <data key="d2">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+      <data key="d1">"Amcrest's cameras and NVR products are affected by a reported vulnerability."</data>
+      <data key="d0">"UNKNOWN"</data>
+    </node>
+    <node id="&quot;CONFIGSET-PROVIDED TEMPLATES&quot;">
+      <data key="d2">chunk-f8473fb759dc15a237f85f77d4a5107f</data>
+      <data key="d1">"Configset-provided templates are only safe to use if the configset has been uploaded by an authenticated and trusted user."</data>
+      <data key="d0">"UNKNOWN"</data>
+    </node>
+    <node id="&quot;TRUSTED CONFIGSET&quot;">
+      <data key="d2">chunk-f8473fb759dc15a237f85f77d4a5107f</data>
+      <data key="d1">"Configset-provided templates are only safe to use if the configset has been uploaded by an authenticated and trusted user."</data>
+      <data key="d0">"UNKNOWN"</data>
+    </node>
+    <node id="&quot;PARAMETER PROVIDED TEMPLATES&quot;">
+      <data key="d2">chunk-f8473fb759dc15a237f85f77d4a5107f</data>
+      <data key="d1">"Parameter provided templates can be rendered by a response writer when enabled, potentially leading to security vulnerabilities if not properly configured."</data>
+      <data key="d0">"UNKNOWN"</data>
+    </node>
+    <node id="&quot;RESPONSE WRITER&quot;">
+      <data key="d2">chunk-f8473fb759dc15a237f85f77d4a5107f</data>
+      <data key="d1">"Parameter provided templates can be rendered by a response writer when enabled, potentially leading to security vulnerabilities if not properly configured."</data>
+      <data key="d0">"UNKNOWN"</data>
+    </node>
+    <node id="&quot;AUTHENTICATION&quot;">
+      <data key="d2">chunk-f8473fb759dc15a237f85f77d4a5107f</data>
+      <data key="d1">"A trusted configset is one that has been uploaded by an authenticated user, ensuring that only authorized templates are used."||"authentication, security risk"</data>
+      <data key="d0">"UNKNOWN"</data>
+    </node>
+    <node id="&quot;MALICIOUS CODE EXECUTION&quot;">
+      <data key="d2">chunk-f8473fb759dc15a237f85f77d4a5107f</data>
+      <data key="d1">"Malicious code execution is a specific type of Remote Code Execution vulnerability that can occur if templates are not properly secured."||"vulnerability, security risk"</data>
+      <data key="d0">"UNKNOWN"</data>
+    </node>
+    <node id="&quot;REMOTE CODE EXECUTION&quot;">
+      <data key="d2">chunk-f8473fb759dc15a237f85f77d4a5107f</data>
+      <data key="d1">"Malicious code execution is a specific type of Remote Code Execution vulnerability that can occur if templates are not properly secured."||"vulnerability, security risk"</data>
+      <data key="d0">"UNKNOWN"</data>
+    </node>
+    <edge source="&quot;CVE-2021-27104&quot;" target="&quot;FTA&quot;">
+      <data key="d3">9.0</data>
+      <data key="d4">"CVE-2021-27104 is a reported vulnerability affecting the Accellion FTA product."</data>
+      <data key="d5">"vulnerability reporting"</data>
+      <data key="d6">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </edge>
+    <edge source="&quot;CVE-2018-4878&quot;" target="&quot;ADOBE&quot;">
+      <data key="d3">9.0</data>
+      <data key="d4">"CVE-2018-4878 is a reported vulnerability affecting Adobe Flash Player products."</data>
+      <data key="d5">"vulnerability reporting"</data>
+      <data key="d6">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </edge>
+    <edge source="&quot;CVE-2021-21017&quot;" target="&quot;ADOBE&quot;">
+      <data key="d3">9.0</data>
+      <data key="d4">"CVE-2021-21017 is a reported vulnerability affecting Adobe Acrobat and Reader products."</data>
+      <data key="d5">"vulnerability reporting"</data>
+      <data key="d6">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </edge>
+    <edge source="&quot;CVE-2021-28550&quot;" target="&quot;ADOBE&quot;">
+      <data key="d3">9.0</data>
+      <data key="d4">"CVE-2021-28550 is a reported vulnerability affecting Adobe Acrobat and Reader products."</data>
+      <data key="d5">"vulnerability reporting"</data>
+      <data key="d6">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </edge>
+    <edge source="&quot;CVE-2018-4939&quot;" target="&quot;COLDFUSION&quot;">
+      <data key="d3">9.0</data>
+      <data key="d4">"CVE-2018-4939 is a reported vulnerability affecting ColdFusion products."</data>
+      <data key="d5">"vulnerability reporting"</data>
+      <data key="d6">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </edge>
+    <edge source="&quot;CVE-2018-15961&quot;" target="&quot;COLDFUSION&quot;">
+      <data key="d3">9.0</data>
+      <data key="d4">"CVE-2018-15961 is a reported vulnerability affecting ColdFusion products."</data>
+      <data key="d5">"vulnerability reporting"</data>
+      <data key="d6">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </edge>
+    <edge source="&quot;FTA&quot;" target="&quot;CVE-2021-27102&quot;">
+      <data key="d3">9.0</data>
+      <data key="d4">"CVE-2021-27102 is a reported vulnerability affecting the Accellion FTA product."</data>
+      <data key="d5">"vulnerability reporting"</data>
+      <data key="d6">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </edge>
+    <edge source="&quot;FTA&quot;" target="&quot;CVE-2021-27101&quot;">
+      <data key="d3">9.0</data>
+      <data key="d4">"CVE-2021-27101 is a reported vulnerability affecting the Accellion FTA product."</data>
+      <data key="d5">"vulnerability reporting"</data>
+      <data key="d6">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </edge>
+    <edge source="&quot;FTA&quot;" target="&quot;CVE-2021-27103&quot;">
+      <data key="d3">9.0</data>
+      <data key="d4">"CVE-2021-27103 is a reported vulnerability affecting the Accellion FTA product."</data>
+      <data key="d5">"vulnerability reporting"</data>
+      <data key="d6">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </edge>
+    <edge source="&quot;AMCREST&quot;" target="&quot;CAMERAS AND NETWORK VIDEO RECORDER (NVR)&quot;">
+      <data key="d3">8.0</data>
+      <data key="d4">"Amcrest's cameras and NVR products are affected by a reported vulnerability."</data>
+      <data key="d5">"product vulnerability"</data>
+      <data key="d6">chunk-bd0519844bd4c9b35c6a7b6f2bc9d1a2</data>
+    </edge>
+    <edge source="&quot;CONFIGSET-PROVIDED TEMPLATES&quot;" target="&quot;TRUSTED CONFIGSET&quot;">
+      <data key="d3">7.0</data>
+      <data key="d4">"Configset-provided templates are only safe to use if the configset has been uploaded by an authenticated and trusted user."</data>
+      <data key="d5">"security risk, authentication"</data>
+      <data key="d6">chunk-f8473fb759dc15a237f85f77d4a5107f</data>
+    </edge>
+    <edge source="&quot;TRUSTED CONFIGSET&quot;" target="&quot;AUTHENTICATION&quot;">
+      <data key="d3">8.0</data>
+      <data key="d4">"A trusted configset is one that has been uploaded by an authenticated user, ensuring that only authorized templates are used."||"authentication, security risk"</data>
+      <data key="d5">8</data>
+      <data key="d6">chunk-f8473fb759dc15a237f85f77d4a5107f</data>
+    </edge>
+    <edge source="&quot;PARAMETER PROVIDED TEMPLATES&quot;" target="&quot;RESPONSE WRITER&quot;">
+      <data key="d3">6.0</data>
+      <data key="d4">"Parameter provided templates can be rendered by a response writer when enabled, potentially leading to security vulnerabilities if not properly configured."</data>
+      <data key="d5">"vulnerability mechanism, security risk"</data>
+      <data key="d6">chunk-f8473fb759dc15a237f85f77d4a5107f</data>
+    </edge>
+    <edge source="&quot;MALICIOUS CODE EXECUTION&quot;" target="&quot;REMOTE CODE EXECUTION&quot;">
+      <data key="d3">7.0</data>
+      <data key="d4">"Malicious code execution is a specific type of Remote Code Execution vulnerability that can occur if templates are not properly secured."||"vulnerability, security risk"</data>
+      <data key="d5">7</data>
+      <data key="d6">chunk-f8473fb759dc15a237f85f77d4a5107f</data>
+    </edge>
+  </graph>
+</graphml>
